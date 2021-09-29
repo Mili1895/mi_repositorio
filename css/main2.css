@@ -1,0 +1,654 @@
+/* TIPOGRAFIAS PARA EL SITIO */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500;600;700&display=swap');
+
+/* RESETEO DE LA WEB */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ETIQUETAS GLOBALES */
+html {
+    font-size: 62.5%;
+    background-color: lightgoldenrodyellow;
+}
+#principal {
+    background-image: linear-gradient(#ECEB95,#F2E4DF);
+}
+/* ESTILOS A ETIQUETAS */
+
+/* HEADER COLOR, TAMAÑOS Y UBICACION DE LINKS */
+header nav ul li a { /*Color, tamaño y fuente de links del navegador */
+    color: #73433F;
+    font-size: 1.5em;
+    font-family: Barlow;
+    font-weight: 800;
+    text-decoration: none;
+}
+#principal { /* Posicion de los elementos en el body (elemento padre) */
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+header .estilo ul { /* Links sin decoraciones */
+    list-style-type: none;
+}
+.logo {
+    flex-grow: 2;
+}
+.logo img { /* Tamaño de logo */
+    width: 20vw;
+    max-height: 35vh;
+}
+#padre img { /* Tamaño de ilustracion en INDEX*/
+    max-width: 110vw;
+    max-height: 110vh;
+}
+#padre .parrafo { /* Titulo COFFEE CHILL - color, tamaño y fuente */
+    color: #D9644A;
+    font-family: Barlow;
+    font-size: 5.5em;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+}
+#padre .sectionDos h2 { /* Color y tamaño subtitulo SHOP + STORE en INDEX*/ 
+    color: #73433F;
+    font-family: Barlow;
+    font-size: 3.5em;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
+.estilo ul li:hover  a { /* Boton de los links de las paginas */
+    background-color: coral;
+    color: cornsilk;
+    transition: .3s;
+}
+.estilo .menu { /* Distribucion de links en INDEX */
+    display: flex;
+    gap: 0.5rem;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+.menu li { /* Margenes de links en INDEX */
+    margin: 3rem 6rem 0 2rem;
+    
+}
+.logo { /* Ubicacion logo */
+    margin: 0rem 7rem;
+    padding: 0 0 0 3rem;
+}
+
+/* POSICION CON GRIDS - MAIN DE CONTENIDO DE INDEX*/ 
+#padre { /* Main */
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30rem 30rem;
+    gap: 2rem;
+    margin: 0 5rem 0 15rem;
+    align-items: center;
+}
+#padre img {
+    grid-row: 1/3;
+}
+#padre .parrafo { /* Posicion de COFFEE SHOP */
+    align-self: end;
+}
+#padre .sectionDos  { /* Posicion de SHOP + STORE */
+    align-self: start;
+}
+
+/* ESTILO FOOTER */
+.padreDos .sectionTres a img { /* Tamaños de iconos de redes sociales */
+    max-width: 5vw;
+    max-height: 5vh;
+    margin: -1rem 0 10rem 0;
+}
+.padreDos .sectionTres { /* Posicion de iconos de redes sociales en Index */
+    display: flex;
+    justify-content:space-evenly;
+    margin: 10rem 13.5rem 0 6rem;
+}
+.padreDos h4 { /* Párrafo "Derechos de autor - color y tamaño */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 1.7em;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:980px) {
+    .menu li {
+        display: flex;
+        justify-content: end;
+        font-size: 0.8em;
+        margin: 3rem 5rem 0 1rem;
+    }
+    .logo {
+        margin: 0 2rem 0 3rem;
+    }
+    #padre {
+        margin: 0 6rem 0 6rem;
+    }
+    #padre img {
+        margin: 0 0 10rem 0;
+    }
+    #padre .parrafo {
+        font-size: 4.5em;
+    }
+    #padre .sectionDos h2 {
+        font-size: 3em;
+    }
+}
+@media screen and (max-width:768px) {
+    #padre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15rem 15rem 15rem;
+        gap: 1rem;
+    }
+    #padre img {
+        max-width: 80vw;
+        max-height: 80vh;
+        justify-self: center;
+        align-self: center;
+        margin: 2rem 0;
+    }
+    #padre .parrafo {
+        font-size: 4em;
+        justify-self: center;
+    }
+    #padre .sectionDos h2 {
+        font-size: 2.5em;
+    }
+    #padre .sectionDos {
+        justify-self: center;
+    }
+    .menu li {
+        display: flex;
+        justify-content: end;
+        font-size: 0.6em;
+        margin: 3rem 5rem 0 1rem;
+    }
+    .logo img {
+        width: 20vw;
+        max-height: 25vh;
+        margin: 0 2rem 0 -2rem;
+    }
+    .padreDos .sectionTres a img { 
+        max-width: 3vw;
+        max-height: 3vh;
+        margin: -1rem 0 10rem 0;
+    }
+    .padreDos .sectionTres { 
+        display: flex;
+        margin: 10rem 4rem 0 7rem;
+    }
+    .sectionTres h4 { 
+        color: #BF4141;
+        font-family: Barlow;
+        font-size: 1.5em;
+        font-weight: 500;
+        letter-spacing: 0.5em;
+        margin: 0 0 7rem 0;
+    }
+}
+@media screen and (max-width:576px) {
+    .estilo .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        font-size: 1em;
+        margin: 0 0 0 -35rem;
+        line-height: 0.1rem;
+    }
+    .logo img {
+        width: 20vw;
+        max-height: 25vh;
+        margin: 0 0 20rem 0;
+    }
+    #padre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem 10rem 10rem;
+        gap: 1rem;
+    }
+    #padre .parrafo {
+        font-size: 3em;
+        justify-self: center;
+    }
+    #padre .sectionDos h2 {
+        font-size: 2em;
+    }
+    .padreDos .sectionTres a img { 
+        max-width: 2vw;
+        max-height: 2vh;
+        margin: -1rem 0 10rem 0;
+    }
+    .padreDos .sectionTres { 
+        display: flex;
+        margin: 10rem 4rem 0 7rem;
+    }
+    .sectionTres h4 { 
+        color: #BF4141;
+        font-family: Barlow;
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 0.5em;
+        margin: 0 0 7rem 0;
+    }
+}
+/*ESTILO SECCION ABOUT US */
+.padreTres h1 { /* Titulo ABOUT US... tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+}
+.padreTres h3 { /* Párrafo de presentación tamaño - color - fuente - posicion */
+    color:#D9644A;
+    font-family: Barlow;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-align: center justify;
+    margin: 0 15rem;
+    padding: 4rem 0;
+    line-height: 2.2em;
+}
+
+/*ESTILO DE TABLAS DE SERVICES */
+
+table { /* Estilo de tabla - color de su borde - margenes y rellenos */
+    border-collapse: collapse;
+    border-color: #73433F;
+    margin: 3rem 15rem 0 15rem;
+    padding: 2rem 0 0 0;
+}
+table tbody tr td { /* Tabla - distancia entre celdas y texto */
+    padding: 10px 10px;
+}
+.tablaEspecial tbody tr td { /* Tabla - distancia entre celdas y titulos h2 de tabla */
+    padding: 15px 15px;
+}
+table thead th {  /* Titulos de tablas y color de titulos de tablas */
+    color: #73433F;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 2em;
+    font-weight: 600;
+}
+table tbody tr td { /* Color de texto de - comidas y bebidas / caracteristicas, beneficios y recomendaciones */
+    color: #BF4141;
+    text-align: left;
+    font-family: Barlow;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.padreCuatro h1 { /* Titulo HERE ARE OUR SERVICES... tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+}
+.padreCuatro h2 { /* Color, tamaño y fuente de subtitulos h2 de listas */
+    color:#73433F;
+    font-family: Barlow;
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    display: flex;
+    margin: 0 15rem;
+    padding: 4rem 0 2rem 0;
+}
+.padreCuatro li h3 { /*Color, tamaño y fuente de subtitulos h3 de listas */
+    color: #D9644A;
+    font-family: Barlow;
+    font-size: 2.2em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    display: flex;
+    margin: 0 15rem;
+    padding: 1rem 0;
+}
+.padreCuatro li h4 { /* Color, tamaño y fuente de titulo Books (sublista) */
+    color:#BF4141;
+    font-family: Barlow;
+    font-size: 2em;
+    font-weight: 500;
+    display: flex;
+    margin: 0 15rem;
+    padding: 1rem 0;
+}
+.padreCuatro li ul.libros { /* Color, tamaño y fuente de lista de generos de libros */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 1.5em;
+    font-weight: 500;
+    list-style-type: none;
+    text-align: left;
+    margin: 0 15rem;
+    padding: 1rem 0;
+}
+.padreCuatro li ul.objetos li { /* Color, tamaño y fuente de lista de mercaderia */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 1.5em;
+    font-weight: 500;
+    list-style-type: none;
+    margin: 0 20rem;
+    padding: 2rem 0 0 0;
+}
+
+/* ESTILO DE LA SECCION BENEIFITS - POSICION A TRAVES DE GRIDS*/
+.tituloBeneficio { /* Titulo YOUR BENEFITS... tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+}
+.gridBeneficio h2 { /* Subtitulos (h2) tamaño - color - fuente - posicion */ 
+    color: #73433F;
+    font-family: Barlow;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 0 10rem 0 10rem;
+    padding: 1rem 0 5rem 0;
+    letter-spacing: 0.1em;
+}
+.gridBeneficio h3 { /* Contenido (h3) tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+#grid .gridBeneficio { /* Posicion de contenido a traves de GRIDS */
+    width: 1200px;
+    margin: 11rem 0 25rem 11.5rem;
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 2.5fr;
+    grid-template-rows: 15vh 30vh;
+    gap: 1.5rem;
+    align-items: start;
+}
+#grid .nombreFuncion { /* Posicion de contenido a traves de GRIDS */
+    align-self:  center;
+}
+
+/* ESTILO CONTACT */
+body .tituloContacto { /* Titulo CONTACT US... tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+}
+body .tituloContactoDos { /* Subtitulos (h2) de seccion CONTACT US... tamaño - color - fuente - posicion */
+    color: #73433F;
+    font-family: Barlow;
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    display: flex;
+    margin: 0 15rem;
+    padding: 4rem 0 2rem 0;
+}
+body .tituloContactoTres { /* Subtitulos (h3) de seccion CONTACT US... tamaño - color - fuente - posicion */
+    color: #D9644A;
+    font-family: Barlow;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    display: flex;
+    margin: 0 15rem;
+    padding: 1rem 0;
+}
+body .lineaEspecial { /* Color, tamaño y fuente de linea especial */
+    color: #D9644A;
+    font-family: Barlow;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    display: flex;
+    margin: 0 -0.2rem;
+    padding: 1rem 0;
+}
+body form label { /* Color, tamaño y fuente de todas las etiquetas de formularios */
+    color: sienna;
+    font-family: Barlow;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+}
+body form { /* Margen de los formularios */
+    margin-left: 15rem;
+    padding-top: 2rem;
+}
+
+/* ESTILO GALERIA */
+#foto .padreCinco h1 { /* Titulo TAKE A LOOK... tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center; 
+}
+#foto h2 { /* Subtitulos (h2) de seccion GALERY... tamaño - color - fuentes -posicion */
+    color:#73433F;
+    font-family: Barlow;
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    display: flex;
+    margin: 0 15rem;
+    padding: 4rem 0 2rem 0;
+}
+#foto .comida { /* Posicion del contenido .comida */
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 15rem;
+    padding: 4rem 0 2rem 0; 
+}
+#foto .libro { /* Posicion del contenido .libro */
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 15rem;
+    padding: 4rem 0 2rem 0; 
+}
+.tamaño img { /* Foto principal del espacio */
+    max-width: 75vw;
+    max-height: 75vh;
+    display: flex;
+    margin: 2rem 25rem 0 15rem;
+}
+#foto .tamañoDos img { /* Fotos de comida y bebida */
+    max-width: 31vw; 
+    max-height: 31vh;
+    margin: 0 3.7rem 0 15rem;
+    padding: 2rem 0; 
+}
+#foto .tamañoTres img { /*Fotos de muñecos */
+    max-width: 30vw;
+    max-height: 30vh;
+    margin: 1rem 3rem 0 15rem;    
+}
+#foto .tamañoCuatro img { /*Foto de libros y mangas */
+    max-width: 31vw; 
+    max-height: 31vh; 
+    margin: 0 -25rem 0 35rem;
+    padding: 2rem 0; 
+}
+
+/* ESTILO GRID CLOTHES */
+#ropa { /* Posicion del contenido de CLOTHES a traves de GRIDS */
+    width: 1130px;
+    margin: 0 5.5rem 0 11.5rem;
+    display: grid;
+    grid-template-columns: repeat(4,20vw);
+    grid-template-rows: 30vh 30vh 30vh;
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+}
+h1 { /* Titulo OUR CLOTHES... tamaño - color - fuente - posicion */
+    color: #BF4141;
+    font-family: Barlow;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;  
+}
+#ropa h2 { /* Titulos principales tamaño - color - fuente */
+    color: #73433F;
+    font-family: Barlow;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+#ropa h3 { /* Contenido debajo de titulos principales tamaño - color - fuente - posicion */
+    color:#BF4141;
+    font-family: Barlow;
+    font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-align: left justify;
+}
+#ropa .ropaUno { /* Posicion de contenido .ropaUno */
+    justify-self: center;
+    align-self: center;
+}
+#ropa .ropaDos { /* Posicion de contenido .ropaDos */
+    justify-self: start;
+    align-self: center;
+}
+#ropa .ropaTres { /* Posicion de contenido .ropaTres */
+    grid-column: span 4;
+    align-self: center
+}
+/* CARRUSELES DE CLOTHES */
+.container { /* Primer carrusel de shirts - hoodies - bennies - ubicacion */
+    width: 400px;
+    height: 400px;
+    margin: 0 200px 0 600px;
+}
+.containerDos { /* Segundo carrusel de Else (pins - llaveros - tazas) - ubicacion */
+    width: 350px;
+    height: 350px;
+    margin: 0 100px 0 800px; 
+}
+
+/* PRACTICA ANIMACIONES - TRANSICIONES - TRANSFORMACIONES */
+/* ANIMACION DE TITULOS PRINCIPALES */
+@keyframes inicio {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+        color: #D9644A;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+@keyframes inicioDos {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg)
+    }
+}
+@keyframes inicioTres {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-360deg)
+    }
+}
+@keyframes inicioTamaño {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+        transform: scale(1,1.5)
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+@keyframes inicioFoto {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+        transform: scale(2)
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+h1 { /* Animacion de titulos principales de secciones de sitio web */
+    animation-duration: 2s;
+    animation-name: inicio;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+.parrafo { /* Animacion de titulo COFFEE SHOP de Index */
+    animation-duration: 4s;
+    animation-name: inicio;
+    animation-delay: 0s;
+}
+.tamañoDos img { /* Animacion de imagenes de GALERY (fotos comida) */
+    animation-duration: 3s;
+    animation-name: inicioDos;
+    animation-delay: 0s;
+}
+.tamañoTres img { /* Animacion de imagenes de GALERY (fotos merchandise) */
+    animation-duration: 3s;
+    animation-name: inicioTres;
+    animation-delay: 0s;
+}
+.tamañoCuatro img { /* Animacion de imagenes de GALERY (fotos libros) */
+    animation-duration: 3s;
+    animation-name: inicioDos;
+    animation-delay: 0s;
+}
+.tamaño img { /* Animacion de imagenes de GALERY (foto principal) */
+    animation-duration: 3s;
+    animation-name: inicioTamaño;
+    animation-delay: 0s;
+}
+#padre img { /* Animacion de ilustracion de Index */
+    animation-duration: 4s;
+    animation-name: inicioFoto;
+    animation-delay: 0s;
+}
